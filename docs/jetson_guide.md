@@ -10,6 +10,23 @@ The following software is required before you start installing the server:
   - [Flashing Software](https://www.balena.io/etcher/)
   - [SD Card Formater](https://www.sdcard.org/downloads/formatter/)
 
+Extra first steps after etching, getting internet setup etc.
+from:https://www.thespaghettidetective.com/blog/2020/04/19/jetson-nano-spaghetti-detective-guide/
+Alright, awesome! Now we have access to a SSH command line!
+First thing's first, lets get everything updated
+
+`sudo apt-get update -y && sudo apt-get upgrade -y`
+
+After all that is finished, we need to install some dependencies.
+
+`sudo apt-get install -y curl 
+sudo apt-get install -y python-pip
+sudo apt-get install -y python3-pip
+sudo apt-get install -y libffi-dev
+sudo apt-get install -y python-openssl`
+
+
+
 - [Docker-compose](https://docs.docker.com/compose/install/#install-using-pip) (Docker is already pre-loaded with JetPack). Currently, there is no established method of installing Docker-compose that we know will work first try for the newest version of JetPack. However, we do have a list of methods/resources that can be referred to on how to do this.
     - Method 1: [pipenv](https://docs.docker.com/compose/install/#install-using-pip) (Alternative install options)
         - Run `pip install --user pipenv` to install pipenv.
